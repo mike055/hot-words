@@ -1,0 +1,13 @@
+{
+	"presets": [
+		"@babel/preset-react",
+		["@babel/preset-env", { "targets" : {"node": "current"}}],
+		"@babel/preset-typescript"
+	],
+	"plugins": [
+		"@babel/proposal-object-rest-spread",
+		"@babel/plugin-syntax-dynamic-import",
+		"@babel/proposal-class-properties",
+		["styled-components", { "ssr": true }]
+	]
+}
