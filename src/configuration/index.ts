@@ -1,4 +1,4 @@
-import { HotWordConfiguration } from '../types';
+import { HotWordConfiguration, GameConfiguration } from '../types';
 
 // https://htmlcolorcodes.com/color-chart/web-safe-color-chart/
 const hotWordConfiguration: HotWordConfiguration = {
@@ -23,6 +23,11 @@ const hotWordConfiguration: HotWordConfiguration = {
             { word: 'had' },
         ],
     },
+};
+
+export const gameConfiguration: GameConfiguration = {
+    listen: { title: 'Listen to the words' },
+    memory: { title: 'Memory' },
 };
 
 export default hotWordConfiguration;

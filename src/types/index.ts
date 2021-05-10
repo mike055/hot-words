@@ -5,9 +5,16 @@ export interface HotWordConfiguration {
 export interface HotWords {
     colour: string;
     title: string;
-    words: Array<HotWord>;
+    words: HotWord[];
 }
 
 export interface HotWord {
     word: string;
+}
+
+export interface GameConfiguration {
+    [key: string]: Game;
+}
+export interface Game {
+    title: string;
 }

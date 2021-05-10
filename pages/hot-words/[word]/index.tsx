@@ -1,7 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import hotWordsConfiguration from '../../../src/configuration';
+import hotWordsConfiguration, { gameConfiguration } from '../../../src/configuration';
 
 import { Layout, Main, Container, Wrapper } from '../../../src/components/layout';
 
@@ -32,8 +33,14 @@ export default function HotWordsMenu() {
                     <Wrapper>
                         <Container>
                             <ul>
-                                {words.map((w) => {
-                                    return <li key={w.word}>{w.word}</li>;
+                                {Object.keys(gameConfiguration).map((g) => {
+                                    return (
+                                        <li key={g}>
+                                            <Link href="/hot-words/[word]/[game]" as={`/hot-words/${word}/${g}`}>
+                                                <a>{gameConfiguration[g].title}</a>
+                                            </Link>
+                                        </li>
+                                    );
                                 })}
                             </ul>
                         </Container>
